@@ -5,8 +5,46 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFTemplate"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        FontSize="12"
+        FontFamily="Consolas"
+        Title="WPFTemplate" Height="400" Width="400">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <!-- Pad left edge with 20px -->
+            <ColumnDefinition Width="20" />
+
+            <!-- Content Colums -->
+            <ColumnDefinition Width="auto" /> 
+            <ColumnDefinition Width="auto" /> 
+            <ColumnDefinition Width="auto" /> 
+
+            <!-- Fill rest of form based on content columns -->
+            <ColumnDefinition Width="*" /> 
+
+            <!-- Pad right edge with 20px -->
+            <ColumnDefinition Width="20" /> 
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <!-- Pad top edge with 20px -->
+            <RowDefinition Height="20" />
+
+            <!-- Content Rows -->
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+
+            <!-- Fill rest of form based on content rows -->
+            <RowDefinition Height="*" />
+
+            <!-- Pad bottom edge with 20px -->
+            <RowDefinition Height="20" />
+        </Grid.RowDefinitions>
+
+         <!-- Simple TextBlock -->
+        <TextBlock Grid.Column="1" Grid.Row="1" Text=" TextBlock in Column 1, Row 1" />
+        <TextBlock Grid.Column="1" Grid.Row="2" Text=" TextBlock in Column 1, Row 2" />
+        <TextBlock Grid.Column="2" Grid.Row="1" Text=" TextBlock in Column 2,&#x0a;Row 1" />
+        <TextBlock Grid.Column="2" Grid.Row="2" xml:space="preserve"> TextBlock in Column 2, <LineBreak/>Row 2</TextBlock>
     </Grid>
 </Window>
